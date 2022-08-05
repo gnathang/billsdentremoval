@@ -1,0 +1,378 @@
+/* *************
+    Global Styles
+************** */
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color:#111;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+header a,
+footer a {
+  transition: color 0.15s ease;
+  padding: 3px;
+}
+
+header a:hover,
+footer a:hover {
+    color:#778899;
+
+}
+
+p {
+  font-size: 26px;
+  /* color: black; */
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  line-height: 1.4em;
+  font-family: 'Mulish', sans-serif !important;
+  color:rgb(75, 87, 97);
+}
+
+h2 {
+  letter-spacing: .25em;
+  font-size: 36px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* *************
+    Fonts 
+************** */
+
+.raleway {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.mulish {
+  font-family: 'Mulish', sans-serif;
+}
+
+/* *************
+  Header styles 
+************** */
+
+.site-header {
+  box-shadow: 0px 0px 8px 0px rgba( 0, 0, 0, 0.4 );
+}
+
+.logo {
+  width: 60px;
+}
+
+/* *************
+  Navigation styles 
+************** */
+
+.menu ul {
+  overflow-wrap: break-word;
+  list-style: none;
+}
+.main-nav-big .menu ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.main-nav-big .menu li {
+margin-left: 2rem;
+margin-right: 2rem;
+text-align: center;
+}
+
+.main-nav-small {
+  transform: translateY(-100%);
+  transition: transform 0.5 ease;
+  z-index: 0; 
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.main-nav-small .menu li {
+  padding-bottom: 10px;
+} 
+
+/* addClass to open main-nav-small on small viewports */
+.open {
+  transform: translateY(-0%) !important;
+  z-index: 4 !important;
+}
+
+li:after {
+  content: '';
+  margin: 10px;
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 10px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+li:hover:after {
+  width: 100%;
+  background: #778899;
+}
+
+.social-link:hover,
+.logo:hover,
+.hamburger:hover {
+   filter: brightness(0.5);
+}
+
+.social-link, .logo, .hamburger {
+  transition: filter 0.3s ease;
+}
+
+/* *************
+  Post styles 
+************** */
+
+.entry-post p {
+  line-height: 1.6;
+}
+
+.entry-post a {
+  text-decoration: none;
+  color:darkblue;
+}
+
+.entry-title {
+  text-align: left !important;
+  font-weight: 100 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.05em !important;
+  font-family: 'Raleway', sans-serif !important;
+  padding-bottom: 20px;
+}
+
+.attributes,
+.about,
+.welcome {
+  max-width: 800px;
+}
+
+.attribute h2 {
+  text-align: left !important;
+}
+
+.pdr-video video {
+  max-width: 480px;
+  max-height: 848px;
+}
+
+/* *************
+  Hero styles 
+************** */
+
+/* Layer for background on home page */
+.section-hero-bg {
+  height: 120vh;
+  z-index: 1;
+  filter:saturate(1.1);
+  filter:brightness(50%);
+  box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.4 );
+}
+
+/* Layer for text on home page */
+.section-hero-text {
+  height: 100vh;
+  position: absolute;
+  top: 20rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  color: whitesmoke;
+}
+
+/* Buttons on homepage hero */
+.get-a-quote-button:hover,
+.work-button:hover {
+  background-color: rgb(245, 245, 245, 0.5);
+}
+
+.get-a-quote-button,
+.work-button {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* hero on about page */
+.about-hero {
+  height: 89vh;
+  /* background-position: right 0px top -70px; */
+  filter:saturate(1.1);
+  filter:brightness(60%);
+  box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.4 );
+}
+
+
+/* *************
+  Footer styles 
+************** */
+
+.site-footer {
+  box-shadow: 0 2px 2px 2px #333;
+}
+
+.site-footer p {
+  color: whitesmoke;
+  font-size: 12px;
+}
+
+/* *************
+  Contact form styles 
+************** */
+
+.wpcf7-form-control-wrap {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+/* *************
+  Responsive styles 
+************** */
+
+@media (max-width:1030px) {
+  .main-nav-big li {
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .pdr p {
+    font-size: 22px;
+  }
+}
+
+
+@media (max-width:916px) {
+  .main-nav-big li {
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+}
+
+
+@media (max-width:800px) {
+
+  .entry-post p {
+    font-size: 16px;
+  }
+
+  .entry-post h2 {
+    font-size: 22px;
+  }
+
+  .entry-post {
+    max-width: none;
+  }
+
+  .site-footer p {
+    font-size: 8px;
+  }
+
+  .section-hero-bg {
+    background-position: center;
+  }
+
+  .about-hero {
+    background-position: right;
+
+  }
+}
+
+
+@media (max-width:664px) {
+  .main-nav-big li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .section-hero-text h2 {
+    font-size: 26px !important;
+  }
+
+  .section-hero-text h3 {
+    font-size: 13px !important;
+  }
+
+}
+
+@media (max-width:650px) {
+  .main-nav-big li {
+    display: none;
+  }
+
+  .pdr-video video {
+    max-width: 240px;
+    max-height: 424px;
+  }
+	
+	.section-hero-bg {
+	  height: 120vh;
+
+	}
+	
+	.kamma-creative {
+		display: none;
+	}
+}
+
+@media (min-width:650px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width:450px) {
+
+  .entry-post f2 {
+    font-size: 20px !important;
+  }
+
+  .section-hero-text h2 {
+    font-size: 24px !important;
+  }
+
+  .section-hero-text h3 {
+    font-size: 10px !important;
+  }
+
+  .attribute {
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .mobile,
+  .professional,
+  .efficient,
+  .affordable {
+    display: block;
+    padding-bottom: 30px;
+  }
+  
+}
+
+@media (max-width: 380px) {
+
+	.form-field {
+		width: 80vw;
+	}
+	
+	.section-hero-bg {
+		height: 140vh;
+	}
+
+}
